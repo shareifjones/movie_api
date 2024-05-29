@@ -1,15 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Documentation</title>
 </head>
 
 <body>
-<script src="/server.js"></script>
-<h1>Documentation Page</h1>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+<h1>Documentation for Movie API</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Description of Endpoint Return</th>
+            <th>Endpoint URL</th>
+            <th>Method Type</th>
+            <th>Format of Request Data</th>
+            <th>Format of Response Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Return a list of ALL movies</td>
+            <td>/movies</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>{
+                "Title": "Bad Boys",
+                "Description": "Bad Boys is a 1995 American buddy cop action comedy film directed by Michael Bay in his feature directorial debut, produced by Don Simpson and Jerry Bruckheimer, and starring Martin Lawrence and Will Smith as two Miami narcotics detectives Marcus Burnett and Mike Lowrey. ",
+                "Genre": {
+                    "Name": "Action Comedy",
+                    "Description": "The action comedy film genre represents a captivating fusion of high-octane excitement and uproarious humor, creating a cinematic experience that delights audiences across the globe."
+                },
+                "Director": {
+                    "Name": "Michael Bay",
+                    "Bio": "Michael Benjamin Bay is an American film director and producer. He is best known for making big-budget, high-concept action films characterized by fast cutting, stylistic cinematography and visuals, and extensive use of special effects, including frequent depictions of explosions.",
+                    "Birth": 1965
+                },
+                "Image URL": " ",
+                "Featured": false
+            },</td>
+        </tr>
+        <tr>
+            <td>Return data about a single movie by title</td>
+            <td>/movies/:title</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding data about the requested movie ex:
+                <code>
+                        {
+                            "Title": "Inception",
+                            "Description": "The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.",
+                            "Genre": {
+                                "Name": "Science Fiction",
+                                "Description": "Fiction based on imagined future scientific or technological advances and major social or environmental changes, frequently portraying space or time travel and life on other planets."
+                            },
+                            "Director": {
+                                "Name": "Christopher Nolan",
+                                "Bio": "Christopher Nolan is a British film director and writer acclaimed for his noirish visual aesthetic and unconventional, often highly conceptual narratives. His notable films include Inception (2010), Interstellar (2014), Dunkirk (2017), and several Batman movies.",
+                                "Birth": 1970
+                            },
+                            "Image URL": " ",
+                            "Featured": false
+                        }
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Return data about a single movie's genre by title</td>
+            <td>/movies/genre/:genreName</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding data about the genre that is being searched:
+                <code>
+                        "Name": "Science Fiction",
+                        "Description": "Fiction based on imagined future scientific or technological advances and major social or environmental changes, frequently portraying space or time travel and life on other planets."
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Return data about a single movie's director by title</td>
+            <td>/movies/directors/:directorName</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A JSON object holding data about the director that is being searched:
+                <code>
+                    "Name": "Christopher Nolan",
+                    "Bio": "Christopher Nolan is a British film director and writer acclaimed for his noirish visual aesthetic and unconventional, often highly conceptual narratives. His notable films include Inception (2010), Interstellar (2014), Dunkirk (2017), and several Batman movies.",
+                    "Birth": 1970
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Return the documentation page</td>
+            <td>/documentation</td>
+            <td>GET</td>
+            <td>None</td>
+            <td>A html page holding the documentation page of this app</td>
+        </tr>
+        <tr>
+            <td>Create new user with uuid</td>
+            <td>/users</td>
+            <td>POST</td>
+            <td>A JSON object with the new data for the new user:
+                <code>
+                        "name": "Mary",
+                        "favoriteMovies": []
+                </code>
+            </td>
+            <td>A JSON object holding data from the user that has been added plus uuid ex:
+                <code>
+                        "name": "Mary",
+                        "favoriteMovies": [],
+                        "id": "4101dd3a-c019-45af-829a-c40bd7b5291d"
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Update user info</td>
+            <td>/users/:id</td>
+            <td>PUT</td>
+            <td>A JSON object holding data from the user to be updated ex:
+                <code>
+                    {
+                        "name": "Sofia",
+                        "favoriteMovies": "Bad Boys"
+                    }
+                </code>
+            </td>
+            <td>A JSON object holding data from the user that has been updated ex:
+                <code>
+                    {
+                        "id": "1",
+                        "name": "Sofia Updated Name",
+                        "favoriteMovies": "Bad Boys"
+                    }
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Update users favMovies by title and user id</td>
+            <td>/users/:id/:movieTitle</td>
+            <td>POST</td>
+            <td>A JSON object holding data from the user about favMovies to be updated ex:
+                <code>
+                    {
+                        "name":"Chris",
+                        "favoriteMovies":[]
+                    }
+                </code>
+            </td>
+            <td>A message returning if the users favMovies have been successfully updated with the updated favMovies logged on the console ex:
+                <code>
+                    Juice has been added to user 1's array
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>Delete a user's favMovie</td>
+            <td>/users/:id/:movieTitle</td>
+            <td>DELETE</td>
+            <td>None</td>
+            <td>A message returning if the users favMovies have been successfully updated with the updated favMovies logged on the console ex:
+                <code>
+                    How High has been removed from user 2's array
+                </code>
+            </td>
+            </tr>
+        <tr>
+            <td>Delete a user</td>
+            <td>/users/:id/</td>
+            <td>DELETE</td>
+            <td>None</td>
+            <td>A message returning if the user was successfully deleted</td>
+                <code>
+                    User 1 has been deleted.
+                </code>
+        </tr>
+    </tbody>
+</table>
 </body>
 
 <footer>

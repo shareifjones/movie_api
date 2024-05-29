@@ -176,18 +176,20 @@ let movies = [
 ];
 
 
-// CREATE/ POST
-app.post('/users', (req, res) =>{
+
+// CREATE/ POST must add user data is space
+app.post('/users', (req, res) => {
     const newUser = req.body;
 
     if(newUser.name) {
-        newUser.id == uuid.v4();
+        newUser.id = uuid.v4();
         users.push(newUser);
         res.status(201).json(newUser);
     } else {
         res.status(400).send('Users need names.')
     }
 })
+
 
 // UPDATE
 app.put('/users/:id', (req, res) =>{
@@ -204,6 +206,7 @@ app.put('/users/:id', (req, res) =>{
     }
 })
 
+
 // POST/ CREATE
 app.post('/users/:id/:movieTitle', (req, res) =>{
     const { id, movieTitle } = req.params;
@@ -219,7 +222,8 @@ app.post('/users/:id/:movieTitle', (req, res) =>{
     }
 })
 
-// DELETE REMOVE MOVIE
+
+// DELETE REMOVE MOVIE FROM USER
 app.delete('/users/:id/:movieTitle', (req, res) =>{
     const { id, movieTitle } = req.params;
     
@@ -244,15 +248,11 @@ app.delete('/users/:id', (req, res) =>{
 
     if (user) {
         users = users.filter( user => user.id != id );
-        res.status(200).send(`user ${id} has been deleted.`);;
+        res.status(200).send(`User ${id} has been deleted.`);;
     } else {
         res.status(400).send('No such user.')
     }
 })
-
-
-// express function
-app.use('/documentation.html', express.static('movie_api/public'));
 
 
 // GET/ READ Requests
@@ -295,6 +295,10 @@ app.get('/movies/directors/:directorName', (req, res) => {
     } else {
         res.status(400).send('No such director.')
     }
+});
+
+app.get('/documentation', (req, res) => {                  
+    res.sendFile('public/documentation.html', { root: __dirname });
 });
 
 // error handler
