@@ -12,11 +12,19 @@ let users = [
     {
         id: 1,
         name: "Chris",
+        username: [],
+        password: [],
+        email: [],
+        birthdate: [],
         favoriteMovies: []
     },
     {
         id: 2,
         name: "Sofia",
+        username: [],
+        password: [],
+        email: [],
+        birthdate: [],
         favoriteMovies: ["How High"]
     },
 ]
@@ -40,7 +48,7 @@ let movies = [
     },
     {
         "Title":"How High",
-        "Description":"In the film, Redman and Method Man portray two cannabis users who are visited by the ghost of a deceased friend after smoking his ashes. The ghost helps with their exams, and they receive scholarships to Harvard University. The film was released by Universal Pictures on December 21, 2001, and received generally negative reviews from critics.[3][4]",
+        "Description":"In the film, Redman and Method Man portray two cannabis users who are visited by the ghost of a deceased friend after smoking his ashes. The ghost helps with their exams, and they receive scholarships to Harvard University. The film was released by Universal Pictures on December 21, 2001, and received generally negative reviews from critics.",
         "Genre": {
             "Name":"Comedy",
             "Description":"A comedy film is a film genre that emphasizes humor."
@@ -57,7 +65,7 @@ let movies = [
         "Title":"Interstellar",
         "Description":"Set in a dystopian future where Earth is suffering from catastrophic blight and famine, the film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for humankind.",
         "Genre": {
-            "Name":"Sciene Fiction",
+            "Name":"Science Fiction",
             "Description":"Fiction based on imagined future scientific or technological advances and major social or environmental changes, frequently portraying space or time travel and life on other planets."
         },
         "Director": {
@@ -92,7 +100,7 @@ let movies = [
         },
         "Director": {
             "Name":"Brett Ratner",
-            "Bio": "Brett Ratner is an American film director and producer. He directed the Rush Hour film series, The Family Man, Red Dragon, X-Men: The Last Stand, and Tower Heist. He is a producer of several films, including the Horrible Bosses series, The Revenant and War Dogs,[2][3][4] and was an executive producer of the television series Prison Break.",
+            "Bio": "Brett Ratner is an American film director and producer. He directed the Rush Hour film series, The Family Man, Red Dragon, X-Men: The Last Stand, and Tower Heist. He is a producer of several films, including the Horrible Bosses series, The Revenant and War Dogs, and was an executive producer of the television series Prison Break.",
             "Birth":1969.0
         },
         "Image URL":" ",
@@ -100,7 +108,7 @@ let movies = [
     },
     {
         "Title":"Spider-Man, Across The Spiderverse",
-        "Description":" It is the sequel to Spider-Man: Into the Spider-Verse (2018) and the second film in the Spider-Verse franchise, which is set in a shared multiverse of alternate universes called the Spider-Verse.",
+        "Description":"It is the sequel to Spider-Man: Into the Spider-Verse (2018) and the second film in the Spider-Verse franchise, which is set in a shared multiverse of alternate universes called the Spider-Verse.",
         "Genre": {
             "Name":"Superhero Fiction",
             "Description":"Superhero fiction is a subgenre of speculative fiction examining the adventures, personalities and ethics of costumed crime fighters known as superheroes, who often possess superhuman powers and battle similarly powered criminals known as supervillains."
