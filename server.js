@@ -10,16 +10,19 @@ const Models = require('./models.js');
 const Movies = Models.Movie;
 const Users = Models.User;
 
+
 mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+const cors = require('cors');
+app.use(cors());
+let auth = require('./auth')(app);
+const passport = require('passport');
+require('passport');
 
 // middleware functions
 app.use(bodyParser.json());
 app.use(morgan('common'));
-
-let auth = require('./auth')(app);
-const passport = require('passport');
-require('passport');
 
 let users = [
     {
@@ -209,30 +212,32 @@ let movies = [
   Birthday: Date
 }*/
 app.post('/users', async (req, res) => {
-    await Users.findOne({ Username: req.body.Username })
-      .then((user) => {
-        if (user) {
-          return res.status(400).send(req.body.Username + 'already exists');
-        } else {
-          Users
-            .create({
-              Username: req.body.Username,
-              Password: req.body.Password,
-              Email: req.body.Email,
-              Birthday: req.body.Birthday
-            })
-            .then((user) =>{res.status(201).json(user) })
+  let hashedPassword = Users.hashPassword(req.body.Password);
+  await Users.findOne({ Username: req.body.Username }) // Search to see if a user with the requested username already exists
+    .then((user) => {
+      if (user) {
+      //If the user is found, send a response that it already exists
+        return res.status(400).send(req.body.Username + ' already exists');
+      } else {
+        Users
+          .create({
+            Username: req.body.Username,
+            Password: hashedPassword,
+            Email: req.body.Email,
+            Birthday: req.body.Birthday
+          })
+          .then((user) => { res.status(201).json(user) })
           .catch((error) => {
             console.error(error);
             res.status(500).send('Error: ' + error);
-          })
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        res.status(500).send('Error: ' + error);
-      });
-  });
+          });
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('Error: ' + error);
+    });
+});
 
   // Add a movie to a user's list of favorites
 app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', {session: false}), async (req, res) => {
@@ -248,6 +253,8 @@ app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', {sessi
       res.status(500).send('Error: '+ err);
     });
   });
+
+app.post()
 
 
 //DELETE a user by username
