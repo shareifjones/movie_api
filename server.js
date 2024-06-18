@@ -12,8 +12,9 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 
-mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require('cors');
 app.use(cors());
@@ -268,7 +269,6 @@ app.post('/users/:Username/movies/:MovieID', passport.authenticate('jwt', {sessi
     });
   });
 
-app.post()
 
 
 //DELETE a user by username
@@ -431,3 +431,5 @@ const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0',() => {
  console.log('Listening on Port ' + port);
 });
+
+
