@@ -1,23 +1,23 @@
 const passport = require('passport'),
-    //defines your basic HTTP authentication for login requests.
+  //defines your basic HTTP authentication for login requests.
   LocalStrategy = require('passport-local').Strategy,
   Models = require('./models.js'),
   passportJWT = require('passport-jwt');
 
 let Users = Models.User,
-    //it allows you to authenticate users based on the JWT submitted alongside their request
+  //it allows you to authenticate users based on the JWT submitted alongside their request
   JWTStrategy = passportJWT.Strategy,
   ExtractJWT = passportJWT.ExtractJwt;
 
-  passport.use(
-    new LocalStrategy(
-      {
-        usernameField: 'Username',
-        passwordField: 'Password',
-      },
-      async (username, password, callback) => {
-        console.log(`${username} ${password}`);
-        await Users.findOne({ Username: username })
+passport.use(
+  new LocalStrategy(
+    {
+      usernameField: 'Username',
+      passwordField: 'Password',
+    },
+    async (username, password, callback) => {
+      console.log(`${username} ${password}`);
+      await Users.findOne({ Username: username })
         .then((user) => {
           if (!user) {
             console.log('incorrect username');
@@ -38,9 +38,9 @@ let Users = Models.User,
             return callback(error);
           }
         })
-      }
-    )
-  );
+    }
+  )
+);
 
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
