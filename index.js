@@ -60,7 +60,7 @@ let movies = [
       "Bio": "Michael Benjamin Bay is an American film director and producer. He is best known for making big-budget, high-concept action films characterized by fast cutting, stylistic cinematography and visuals, and extensive use of special effects, including frequent depictions of explosions.",
       "Birth": 1965.0
     },
-    "Image URL": " ",
+    "Image URL": "https://facts.net/wp-content/uploads/2023/11/32-facts-about-the-movie-bad-boys-1699680787.jpg",
     "Featured": false
   },
   {
@@ -75,7 +75,7 @@ let movies = [
       "Bio": "Jesse Byron Dylan is an American film director and production executive. He is the founder of the media production company Wondros and Lybba, a non-profit organization. He is also a member of the Council on Foreign Relations and TED.",
       "Birth": 1966.0
     },
-    "Image URL": " ",
+    "Image URL": "https://images.moviesanywhere.com/b82070f141a4a776fefe195233f28fd0/d3d0e98f-f194-4e54-9856-660f65eb0338.jpg",
     "Featured": false
   },
   {
@@ -90,7 +90,7 @@ let movies = [
       "Bio": "Christopher Nolan is a British film director and writer acclaimed for his noirish visual aesthetic and unconventional, often highly conceptual narratives. His notable films include Inception (2010), Interstellar (2014), Dunkirk (2017), and several Batman movies.",
       "Birth": 1970.0
     },
-    "Image URL": " ",
+    "Image URL": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
     "Featured": false
   },
   {
