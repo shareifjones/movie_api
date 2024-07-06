@@ -369,7 +369,7 @@ app.get('/users/:Username', passport.authenticate('jwt', { session: false }), as
 });
 
 // GET all movies
-app.get('/movies', async (req, res) => {
+app.get('/movies', passport.authenticate('jwt', { session: false }), async (req, res) => {
   await Movies.find()
     .then((Movies) => {
       res.status(201).json(Movies);
