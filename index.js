@@ -105,7 +105,7 @@ let movies = [
       "Bio": "The trail-blazing linchpin of a sprawling family dynasty of comic entertainers, it was multi-talented writer/director/producer Keenen Ivory Wayans who led the familial pack and was the first to achieve national prominence when he successfully created, launched, wrote, hosted and starred in In Living Color (1990).",
       "Birth": 1958.0
     },
-    "Image URL": " ",
+    "Image URL": "https://resizing.flixster.com/2RD2jKISRFnnOXR84GJHYYpZmWg=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p34622_v_v8_ak.jpg",
     "Featured": false
   },
   {
@@ -120,7 +120,7 @@ let movies = [
       "Bio": "Brett Ratner is an American film director and producer. He directed the Rush Hour film series, The Family Man, Red Dragon, X-Men: The Last Stand, and Tower Heist. He is a producer of several films, including the Horrible Bosses series, The Revenant and War Dogs, and was an executive producer of the television series Prison Break.",
       "Birth": 1969.0
     },
-    "Image URL": " ",
+    "Image URL": "https://yesterdaysmovies.com/wp-content/uploads/2022/01/rush-hour.jpg",
     "Featured": false
   },
   {
@@ -135,7 +135,7 @@ let movies = [
       "Bio": "Kemp Powers is an American playwright, screenwriter, and director. He is best known for his play One Night in Miami and the 2020 film adaptation of the same name, as well as for co-directing the animated films Soul (2020) and Spider-Man: Across the Spider-Verse (2023).",
       "Birth": 1973.0
     },
-    "Image URL": " ",
+    "Image URL": "https://images.thedirect.com/media/article_full/spider-verse-posters_VMqW9U1.jpg",
     "Featured": false
   },
   {
@@ -150,7 +150,7 @@ let movies = [
       "Bio": "Andrew Stanton has been a major creative force at Pixar Animation Studios since 1990, when he became the second animator and ninth employee to join the company's elite group of computer animation pioneers. As Vice President, Creative he currently oversees all shorts and feature projects at the studio.",
       "Birth": 1965.0
     },
-    "Image URL": " ",
+    "Image URL": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/WALL-E_%28character%29.jpg/220px-WALL-E_%28character%29.jpg",
     "Featured": false
   },
   {
@@ -165,7 +165,7 @@ let movies = [
       "Bio": "Christopher Nolan is a British film director and writer acclaimed for his noirish visual aesthetic and unconventional, often highly conceptual narratives. His notable films include Inception (2010), Interstellar (2014), Dunkirk (2017), and several Batman movies.",
       "Birth": 1970.0
     },
-    "Image URL": " ",
+    "Image URL": "https://musicart.xboxlive.com/7/abb02f00-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
     "Featured": false
   },
   {
@@ -180,7 +180,7 @@ let movies = [
       "Bio": "Ernest R. Dickerson, is an American film director and cinematographer. As a cinematographer, he is known for his frequent collaborations with Spike Lee. As a director, he is known for films such as Juice (1992), Tales from the Crypt: Demon Knight (1995), Bones (2001) and Never Die Alone (2004).",
       "Birth": 1952.0
     },
-    "Image URL": " ",
+    "Image URL": "https://m.media-amazon.com/images/M/MV5BNTdmOWM1YTQtMTdmOS00OTM2LWIzNTgtODQ5NDliNDMxYmZiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
     "Featured": false
   },
   {
@@ -195,7 +195,7 @@ let movies = [
       "Bio": "Christopher Nolan is a British film director and writer acclaimed for his noirish visual aesthetic and unconventional, often highly conceptual narratives. His notable films include Inception (2010), Interstellar (2014), Dunkirk (2017), and several Batman movies.",
       "Birth": 1970.0
     },
-    "Image URL": " ",
+    "Image URL": "https://images.squarespace-cdn.com/content/v1/60ca4165cdc96644e18adc3c/1629984421972-33L53AA78JBBKIZSY07Y/A5E2E355-B8F6-4909-B6DB-F2187345842E.jpeg",
     "Featured": false
   },
 ];
