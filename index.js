@@ -150,7 +150,7 @@ let movies = [
       "Bio": "Andrew Stanton has been a major creative force at Pixar Animation Studios since 1990, when he became the second animator and ninth employee to join the company's elite group of computer animation pioneers. As Vice President, Creative he currently oversees all shorts and feature projects at the studio.",
       "Birth": 1965.0
     },
-    "Image URL": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/WALL-E_%28character%29.jpg/220px-WALL-E_%28character%29.jpg",
+    "Image URL": "https://lumiere-a.akamaihd.net/v1/images/p_walle_19753_69f7ff00.jpeg",
     "Featured": false
   },
   {
